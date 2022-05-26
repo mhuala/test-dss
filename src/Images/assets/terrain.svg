@@ -1,0 +1,27 @@
+<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>Layer 1</title>
+  <path stroke="#ffffff" id="svg_5" d="m265.63274,260.81656l14.33681,-24.33643l14.33681,24.33643l-28.67362,0z" fill="#ffffff"/>
+  <ellipse ry="10" rx="10" id="svg_14" cy="10" cx="10" fill="#0C372C"/>
+  <rect id="svg_20" height="0.0885" width="0.0885" y="20.39822" x="28.03097" fill="#ffffff"/>
+  <g stroke="null" id="svg_35">
+   <path stroke="null" id="svg_16" d="m6.71075,15.55998l3.28925,-8.7228l3.28925,8.7228l-6.57849,0z" fill="#ffffff"/>
+   <path stroke="null" id="svg_19" d="m9.40702,15.4249l1.18596,0l0,1.43349l-1.18596,0l0,-1.43349z" opacity="undefined" fill="#ffffff"/>
+   <path stroke="null" id="svg_32" d="m7.27228,12.23849l2.72772,-3.88032l2.72772,3.88032l-2.72772,3.88032l-2.72772,-3.88032z" fill="#ffffff"/>
+   <path stroke="null" id="svg_34" d="m7.74667,9.76694l2.25333,-3.88031l2.25332,3.88031l-2.25332,3.88032l-2.25333,-3.88032z" fill="#ffffff"/>
+  </g>
+  <g stroke="null" id="svg_45">
+   <path stroke="null" id="svg_41" d="m1.19469,12.97156l2.38217,-6.18999l2.38217,6.18999l-4.76434,0z" fill="#ffffff"/>
+   <path stroke="null" id="svg_42" d="m3.1474,12.8757l0.85891,0l0,1.01726l-0.85891,0l0,-1.01726z" opacity="undefined" fill="#ffffff"/>
+   <path stroke="null" id="svg_43" d="m1.60137,10.61452l1.97549,-2.75359l1.97549,2.75359l-1.97549,2.7536l-1.97549,-2.7536z" fill="#ffffff"/>
+   <path stroke="null" id="svg_44" d="m1.94493,8.86063l1.63193,-2.75359l1.63193,2.75359l-1.63193,2.7536l-1.63193,-2.7536z" fill="#ffffff"/>
+  </g>
+  <g stroke="null" id="svg_50">
+   <path stroke="null" id="svg_46" d="m14.04098,12.97157l2.38217,-6.18999l2.38216,6.18999l-4.76433,0z" fill="#ffffff"/>
+   <path stroke="null" id="svg_47" d="m15.99369,12.87571l0.85891,0l0,1.01726l-0.85891,0l0,-1.01726z" opacity="undefined" fill="#ffffff"/>
+   <path stroke="null" id="svg_48" d="m14.44765,10.61453l1.9755,-2.7536l1.97549,2.7536l-1.97549,2.7536l-1.9755,-2.7536z" fill="#ffffff"/>
+   <path stroke="null" id="svg_49" d="m14.79122,8.86064l1.63193,-2.7536l1.63192,2.7536l-1.63192,2.7536l-1.63193,-2.7536z" fill="#ffffff"/>
+  </g>
+ </g>
+</svg>

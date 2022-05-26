@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes bounce {
+    100% {
+        transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(15%);
+    }
+    0% {
+        transform: translateY(-15%);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 600px) {
+    #region {
+        width: 360px;
+        height: 300px;
+    }
+    #homeinfo {
+        width: 360px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 399px) {
+    #region {
+        width: 240px;
+        height: 200px;
+    }
+    #homeinfo {
+        width: 240px !important;
+        height: 200px !important;
+    }
+}
+
+#piechart {
+    --transform-scale-x: -1;
+}
+
+#region path:hover {
+    stroke: #01664c !important;
+    fill: #4fb1a1 !important;
+    stroke-width: 2px !important;
+    fill-opacity: 1 !important;
+    transition: all ease 1s;
+}
+
+#indicador {
+    fill: transparent !important;
+}
+
+.clickeable {
+    position: relative !important;
+    color: lightcyan;
+    text-decoration: none !important;
+    padding: 7px 0 !important;
+    font-size: 1rem;
+}
+
+.clickeable::after {
+    content: "" !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    width: 0% !important;
+    height: 1px !important;
+    background: rgb(4 120 87) !important;
+    transition: 0.5s ease-out !important;
+}
+
+.clickeable:hover::after {
+    left: 0 !important;
+    width: 100% !important;
+}
+
+.fadetext {
+    animation: 1s fade-in;
+}
+
+.svg_bouncer {
+    animation: bounce 2.5s;
+}
+
+.invisible {
+    width: 0px !important;
+}
+/* USAR PARA HACER RESPONSIVE LOS GRAFICOS DE DATASECION DENTRO DE LOS MEDIA QUERY*/
+/* svg.recharts-surface {
+
+} */
