@@ -61,6 +61,80 @@
     fill: transparent !important;
 }
 
+#t-valdivia{
+    background-image: url("./Images/cities-thumbnails/t-valdivia.jpg");
+}
+#t-lanco{
+    background-image: url("./Images/cities-thumbnails/t-lanco.jpg");
+}
+#t-mafil{
+    background-image: url("./Images/cities-thumbnails/t-mafil.jpg");
+}
+#t-lagoranco{
+    background-image: url("./Images/cities-thumbnails/t-lagoranco.jpg");
+}
+#t-launion{
+    background-image: url("./Images/cities-thumbnails/t-launion.jpg");
+}
+#t-riobueno{
+    background-image: url("./Images/cities-thumbnails/t-riobueno.jpg");
+}
+#t-panguipulli{
+    background-image: url("./Images/cities-thumbnails/t-panguipulli.jpg");
+}
+#t-futrono{
+    background-image: url("./Images/cities-thumbnails/t-futrono.jpg");
+}
+#t-corral{
+    background-image: url("./Images/cities-thumbnails/t-corral.jpg");
+}
+#t-loslagos{
+    background-image: url("./Images/cities-thumbnails/t-loslagos.jpg");
+}
+#t-mariquina{
+    background-image: url("./Images/cities-thumbnails/t-mariquina.jpg");
+}
+#t-paillaco{
+    background-image: url("./Images/cities-thumbnails/t-paillaco.jpg");
+}
+
+#f-valdivia{
+    background-image: url("./Images/cities-hero/f-valdivia.jpg");
+}
+#f-lanco{
+    background-image: url("./Images/cities-hero/f-lanco.jpg");
+}
+#f-mafil{
+    background-image: url("./Images/cities-hero/f-mafil.jpg");
+}
+#f-lagoranco{
+    background-image: url("./Images/cities-hero/f-lagoranco.jpg");
+}
+#f-launion{
+    background-image: url("./Images/cities-hero/f-launion.jpg");
+}
+#f-riobueno{
+    background-image: url("./Images/cities-hero/f-riobueno.jpg");
+}
+#f-panguipulli{
+    background-image: url("./Images/cities-hero/f-panguipulli.jpg");
+}
+#f-futrono{
+    background-image: url("./Images/cities-hero/f-futrono.jpg");
+}
+#f-corral{
+    background-image: url("./Images/cities-hero/f-corral.jpg");
+}
+#f-loslagos{
+    background-image: url("./Images/cities-hero/f-loslagos.jpg");
+}
+#f-mariquina{
+    background-image: url("./Images/cities-hero/f-mariquina.jpg");
+}
+#f-paillaco{
+    background-image: url("./Images/cities-hero/f-paillaco.jpg");
+}
+
 .clickeable {
     position: relative !important;
     color: lightcyan;

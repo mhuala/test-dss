@@ -1,7 +1,7 @@
 import React, { useState, Fragment } from "react";
 import HomeContent from "../Components/HomeContent";
 
-export default function Home() {
+export default function App() {
     const [visibleIndex, setVisibleIndex] = React.useState(1);
     const [initialBlue, setInitialBlue] = useState(true);
     return (

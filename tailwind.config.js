@@ -16,6 +16,9 @@ module.exports = {
                     icon: "#3671E9",
                 },
             },
+            backgroundImage: {
+                'valdivia-t': "url('./src/Images/cities-thumbnails/t-valdivia.jpg')"
+              }
         },
     },
     plugins: [],

@@ -6,7 +6,8 @@ import "./index.css";
 import Navbar from "./Components/Navbar";
 import App from "./Pages/App";
 import Exportations from "./Pages/Exportations";
-
+import Simulation from "./Pages/Simulation";
+import Ciudades from "./Pages/Ciudades";
 import Footer from "./Components/Footer";
 
 const API = import.meta.env.VITE_API;
@@ -20,7 +21,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                     <Route path="/" element={<App />} />
                     <Route path="/home" element={<App />} />
                     <Route path="/exportations" element={<Exportations />} />
-                    {/* <Route path="/cities" element={<Ciudades />} />
+                    <Route path="/cities" element={<Ciudades />} />
+                    <Route path="/simulation" element={<Simulation />} />
+                    {/* 
                     <Route path="/region" element={<Regionsita />} />
                     <Route path="/valdivia" element={<Ciudad city="valdivia" />} />
                     <Route path="/mariquina" element={<Ciudad city="mariquina" />} />
@@ -34,7 +37,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                     <Route path="/futrono" element={<Ciudad city="futrono" />} />
                     <Route path="/riobueno" element={<Ciudad city="riobueno" />} />
                     <Route path="/mafil" element={<Ciudad city="mafil" />} />
-                    <Route path="/simulation" element={<Simulation />} />
+                    
                    */}
                 </Routes>
                 <Footer />
