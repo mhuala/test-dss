@@ -15,12 +15,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
         <BrowserRouter>
             <div className="flex flex-col h-screen justify-between bg-brand">
-                <Navbar/>
+                <Navbar />
                 <Routes>
                     <Route path="/" element={<App />} />
                     <Route path="/home" element={<App />} />
                     <Route path="/exportations" element={<Exportations />} />
-                {/* <Route path="/cities" element={<Ciudades />} />
+                    {/* <Route path="/cities" element={<Ciudades />} />
                     <Route path="/region" element={<Regionsita />} />
                     <Route path="/valdivia" element={<Ciudad city="valdivia" />} />
                     <Route path="/mariquina" element={<Ciudad city="mariquina" />} />

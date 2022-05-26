@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../Images/assets/logo.svg";
 
 export default function Navbar() {
@@ -18,37 +19,37 @@ export default function Navbar() {
                 <div className=" hidden md:flex flex-row justify-center items-center space-x-8">
                     {/* First section */}
                     <div className="flex flex-row items-center space-x-8">
-                        <a href="/" className="clickeable">
+                        <Link to="/" className="clickeable">
                             <span className="text-white font-bold font-rale">
                                 Inicio
                             </span>
-                        </a>
-                        <a href="/region" className="clickeable">
+                        </Link>
+                        <Link to="/region" className="clickeable">
                             <span className="text-white font-bold font-rale">
                                 Región
                             </span>
-                        </a>
-                        <a href="/cities" className="clickeable">
+                        </Link>
+                        <Link to="/cities" className="clickeable">
                             <span className="text-white font-bold font-rale">
                                 Ciudades
                             </span>
-                        </a>
-                        <a href="/exportations" className="clickeable">
+                        </Link>
+                        <Link to="/exportations" className="clickeable">
                             <span className="text-white font-bold font-rale">
                                 Exportaciones
                             </span>
-                        </a>
+                        </Link>
                     </div>
                     {/* Secondary Section */}
                     <div className="w-0.5 h-6 bg-gray-400 opacity-50"></div>
                     <button className="transform hover:-translate-y-2 transition-transform duration-500 ease-in-out bg-gradient-to-r from-indigo-500 to-indigo-900 hover:bg-blue-600 rounded-xl px-4 py-2">
-                        <a
-                            href="/simulation"
+                        <Link
+                            to="/simulation"
                             className="text-white flex items-center space-x-2"
                         >
                             <span className="font-rale">Simulación</span>
                             <i className="fa fa-flask" aria-hidden="true"></i>
-                        </a>
+                        </Link>
                     </button>
                 </div>
                 {/* MOBILE BUTTON */}
@@ -69,40 +70,40 @@ export default function Navbar() {
                         : "hidden"
                 }
             >
-                <a
-                    href="/home"
+                <Link
+                    to="/home"
                     className="clickeable text-center  block mx-auto w-11/12"
                 >
                     <span className="text-center font-semibold">Inicio</span>
-                </a>
-                <a
-                    href="/region"
+                </Link>
+                <Link
+                    to="/region"
                     className="clickeable text-center  block mx-auto w-11/12"
                 >
                     <span className="text-center font-semibold">Región</span>
-                </a>
-                <a
-                    href="/cities"
+                </Link>
+                <Link
+                    to="/cities"
                     className="clickeable text-center  block mx-auto w-11/12"
                 >
                     <span className="text-center font-semibold">Ciudades</span>
-                </a>
-                <a
-                    href="/exportations"
+                </Link>
+                <Link
+                    to="/exportations"
                     className="clickeable text-center  block mx-auto w-11/12"
                 >
                     <span className="text-center font-semibold">
                         Exportaciones
                     </span>
-                </a>
-                <a
-                    href="/simulation"
+                </Link>
+                <Link
+                    to="/simulation"
                     className="clickeable text-center  block mx-auto w-11/12 "
                 >
                     <span className="text-center font-semibold py-1">
                         Simulación
                     </span>
-                </a>
+                </Link>
             </div>
         </div>
     );
