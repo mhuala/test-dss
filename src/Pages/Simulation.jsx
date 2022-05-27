@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 import simulation from "../Images/assets/simulation.svg";
 import axios from "axios";
 
-const API = import.meta.env.VITE_API;
+const API = import.meta.env.VITE_API_ONLINE;
 
 const sectors = [
     { name: "Silvoagropecuario" },
@@ -50,7 +50,6 @@ export default function Simulation() {
                     ammount: ammount,
                 })
                 .then((response) => {
-                    tree_series.series = [response.data];
                     setInfoData(response.data.data);
                     setGraphData(true);
                     console.log(response.data.data);

@@ -8,6 +8,7 @@ import App from "./Pages/App";
 import Exportations from "./Pages/Exportations";
 import Simulation from "./Pages/Simulation";
 import Ciudades from "./Pages/Ciudades";
+import Region from "./Pages/Region";
 import Footer from "./Components/Footer";
 
 const API = import.meta.env.VITE_API;
@@ -23,8 +24,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                     <Route path="/exportations" element={<Exportations />} />
                     <Route path="/cities" element={<Ciudades />} />
                     <Route path="/simulation" element={<Simulation />} />
+                    <Route path="/region" element={<Region />} />
                     {/* 
-                    <Route path="/region" element={<Regionsita />} />
                     <Route path="/valdivia" element={<Ciudad city="valdivia" />} />
                     <Route path="/mariquina" element={<Ciudad city="mariquina" />} />
                     <Route path="/corral" element={<Ciudad city="corral" />} />
