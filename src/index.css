@@ -45,6 +45,10 @@
     }
 }
 
+div[id*="apex"] {
+    animation: 1s fade-in;
+}
+
 #piechart {
     --transform-scale-x: -1;
 }

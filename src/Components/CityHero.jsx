@@ -7,19 +7,24 @@ import supermarket from "../Images/assets/shopping.png";
 
 const API = import.meta.env.VITE_API_ONLINE;
 
-export default function RegionHero(props) {
-  const [authorities, setAuthorities] = useState([]);
-  const requestURL = `${API}/api/region/politicians`;
+export default function CityHero(props) {
+  const [councilors, setCouncilors] = useState([]);
+  const [mayor, setMayor] = useState([]);
+  const requestURL = `${API}/api/cities/politicians/test12`;
 
   useEffect(() => {
     axios.get(requestURL).then((res) => {
+      setMayor([
+        res.data.politicians.mayor.name,
+        res.data.politicians.mayor.image,
+      ]);
       let l = [];
-      Object.entries(res.data.politicians.authorities).forEach(
+      Object.entries(res.data.politicians.councilors).forEach(
         ([key, value]) => {
           l.push([value.name, value.image]);
         }
       );
-      setAuthorities(l);
+      setCouncilors(l);
     });
   }, []);
 
@@ -35,8 +40,8 @@ export default function RegionHero(props) {
       <div className="relative min-h-screen flex items-center justify-center bg-gray-900">
         {/*- OVERLAY -*/}
         <div
-          id="image"
-          className="absolute inset-0 w-full h-full bg-no-repeat bg-cover bg-center bg-[url('../Images/cities-hero/f-valdivia.jpg')]"></div>
+          id={`f-${props.city}`}
+          className="absolute inset-0 w-full h-full bg-no-repeat bg-cover bg-center"></div>
         <div className="relative min-h-screen min-w-full">
           {/*- CONTENIDO -*/}
           <div className="flex flex-col min-h-screen justify-center items-center space-y-24 text-white">
@@ -78,25 +83,46 @@ export default function RegionHero(props) {
                 </div>
               </div>
               <h2 className="text-3xl sm:text-6xl md:text-8xl font-fredaka text-center mt-40 uppercase bg-gradient-to-t text-transparent bg-clip-text from-white to-gray-500">
-                Los Ríos
+                {props.city}
               </h2>
             </div>
             {/*- Autoridades -*/}
             <div class="flex flex-col justify-center items-center text-white max-w-7xl ">
               <div class="flex flex-wrap justify-center max-w-5/6">
-                {authorities.map((authority, authorityIdx) => (
+                {/* Alcalde */}
+                <div class="flex p-4 ml-5 md:p-10">
+                  <div class="w-full flex items-center justify-center bg-transparent">
+                    <div class="relative w-48 md:w-52 h-14 sm:h-14 md:h-16 bg-gradient-to-r from-teal-700 to-teal-900 rounded-br-full pt-4 pb-8 px-4 shadow-md hover:shadow-lg transition flex flex-col items-center">
+                      <div class="absolute rounded-full bg-transparent w-16 md:w-20 md:h-20 md:p-2 z-10 -top-2 md:-top-4 -left-12 md:-left-14 transition ">
+                        <div class="rounded-full bg-black w-16 sm:w-18 md:w-20 overflow-auto">
+                          <img src={mayor[1]} className="w-20 h-20" />
+                        </div>
+                      </div>
+                      <div class="flex flex-col space-y-2 md:space-y-4">
+                        <label class="absolute font-bold text-gray-100 text-md text-start top-1 left-8 sm:left-10">
+                          {mayor[0]}
+                        </label>
+                        <p class="absolute text-gray-200 text-sm mt-1 leading-relaxed left-8  sm:left-10">
+                          Alcaldesa
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/*  Concejales */}
+                {councilors.map((councilor, councilorIdx) => (
                   <Fragment>
                     <div class="flex p-4 ml-5 md:p-10">
                       <div class="w-full flex items-center justify-center bg-transparent">
-                        <div class="relative w-48 md:w-52 h-14 sm:h-14 md:h-16 bg-gradient-to-r from-amber-700 to-amber-900 rounded-br-full pt-4 pb-8 px-4 shadow-md hover:shadow-lg transition flex flex-col items-center">
+                        <div class="relative w-48 md:w-52 h-14 sm:h-14 md:h-16 bg-gradient-to-r from-purple-700 to-purple-900 rounded-br-full pt-4 pb-8 px-4 shadow-md hover:shadow-lg transition flex flex-col items-center">
                           <div class="absolute rounded-full bg-transparent w-16 md:w-20 md:h-20 md:p-2 z-10 -top-2 md:-top-4 -left-12 md:-left-14 transition ">
                             <div class="rounded-full bg-black w-16 sm:w-18 md:w-20 overflow-auto">
-                              <img src={authority[1]} className="w-20 h-20" />
+                              <img src={councilor[1]} className="w-20 h-20" />
                             </div>
                           </div>
                           <div class="flex flex-col space-y-2 md:space-y-4">
                             <label class="absolute font-bold text-gray-100 text-md text-start top-1 left-8 sm:left-10">
-                              {authority[0]}
+                              {councilor[0]}
                             </label>
                             <p class="absolute text-gray-200 text-sm mt-1 leading-relaxed left-8  sm:left-10">
                               Concejal
@@ -105,10 +131,29 @@ export default function RegionHero(props) {
                         </div>
                       </div>
                     </div>
+                    {/* <div className="flex p-4 ml-5 md:-10">
+                  <div className="w-full flex items-center justify-center bg-transparent">
+                    <div className="relative w-64 h-20 bg-gradient-to-r from-purple-700 to-purple-900 rounded-br-full pt-4 pb-8 px-4 shadow-md hover:shadow-lg transition flex flex-col items-center border border-purple-500">
+                      <div className="absolute rounded-full bg-transparent w-28 h-28 p-2 z-10 -top-2 -left-14 transition ">
+                        <div className="rounded-full bg-black w-full h-full overflow-auto">
+                          <img src={councilor[1]} className="w-24 h-24" />
+                        </div>         
+                      </div>
+                      <div className="flex flex-col pl-4">
+                        <label className="font-bold text-gray-100 text-md">
+                          {councilor[0]}
+                        </label>
+                        <p className="text-gray-200 text-sm mt-1 leading-relaxed">
+                          Concejal
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div> */}
                   </Fragment>
                 ))}
               </div>
-              <div className="flex max-w-7xl justify-center items-center mx-auto space-x-4 ">
+              <div className="flex max-w-7xl justify-center items-center mx-auto space-x-4 py-10">
                 <Link
                   to="commerce_economy"
                   spy={true}
